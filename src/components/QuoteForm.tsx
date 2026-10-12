@@ -23,6 +23,7 @@ export function QuoteForm() {
         name: data.get("name"),
         address: data.get("address"),
         phone: data.get("phone"),
+        email: data.get("email"),
         notes: data.get("notes"),
       }),
     });
@@ -83,6 +84,18 @@ export function QuoteForm() {
           />
         </label>
         <label className="grid gap-1.5 text-sm font-medium text-stone-800">
+          Email address
+          <input
+            name="email"
+            type="email"
+            required
+            autoComplete="email"
+            inputMode="email"
+            placeholder="example@example.com"
+            className="h-11 rounded-lg border border-stone-300 bg-stone-50 px-3 text-base font-normal text-stone-900 outline-none ring-emerald-700/30 focus:border-emerald-700 focus:bg-white focus:ring-2" 
+          />
+        </label>
+        <label className="grid gap-1.5 text-sm font-medium text-stone-800">
           What do you need?{" "}
           <span className="font-normal text-stone-500">(optional)</span>
           <textarea
@@ -109,7 +122,7 @@ export function QuoteForm() {
         </p>
       ) : (
         <p className="mt-4 text-sm text-stone-500">
-          We use your address and number only to reach you about this quote.
+          We use your address, number, and email only to reach you about this quote.
         </p>
       )}
     </form>

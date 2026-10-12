@@ -17,6 +17,7 @@ export async function POST(request: Request) {
   const name = String(payload.name ?? "").trim().slice(0, 120);
   const address = String(payload.address ?? "").trim().slice(0, 240);
   const phone = String(payload.phone ?? "").trim().slice(0, 40);
+  const email = String(payload.email ?? "").trim().slice(0, 254);
   const notes = String(payload.notes ?? "").trim().slice(0, 1000);
   const phoneDigits = digitsOnly(phone);
 
@@ -34,10 +35,18 @@ export async function POST(request: Request) {
     );
   }
 
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    return NextResponse.json(
+      { error: "Please enter an email address we can reply to." },
+      { status: 400 },
+    );
+  }
+
   const lead = {
     name: name || null,
     address,
     phone,
+    email,
     notes: notes || null,
     receivedAt: new Date().toISOString(),
     source: "website-quote-form",
