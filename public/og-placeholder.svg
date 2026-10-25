@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <rect width="1200" height="630" fill="#14532d"/>
-  <text x="80" y="320" fill="#ecfdf5" font-family="Georgia, serif" font-size="56">Greenfield Landscaping</text>
-  <text x="80" y="380" fill="#bbf7d0" font-family="Arial, sans-serif" font-size="28">Lawn care, landscape design, and property maintenance</text>
+  <rect width="1200" height="630" fill="#0a3a58"/>
+  <rect x="0" y="0" width="420" height="630" fill="#0c6b54"/>
+  <text x="80" y="300" fill="#ffffff" font-family="Georgia, serif" font-size="48">Greenfield Landscaping &amp; Pools</text>
+  <text x="80" y="360" fill="#d7f0ff" font-family="Arial, sans-serif" font-size="26">Lawn care, landscape design, and pool services</text>
 </svg>

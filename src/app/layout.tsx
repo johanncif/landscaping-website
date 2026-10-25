@@ -16,7 +16,7 @@ const body = Source_Sans_3({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} | Lawn care & landscape design`,
+    default: `${site.name} | Landscaping & pool services`,
     template: `%s | ${site.name}`,
   },
   description: site.description,
@@ -24,9 +24,16 @@ export const metadata: Metadata = {
     "landscaping",
     "lawn care",
     "landscape design",
+    "pool cleaning",
+    "pool maintenance",
+    "pool opening and closing",
     "yard maintenance",
-    "mulch and planting",
     "landscaping near me",
+    "Osceola County landscaping",
+    "St. Lucie County pool service",
+    "Martin County lawn care",
+    "Palm Beach County landscaping",
+    "Indian River County pool cleaning",
   ],
   openGraph: {
     title: `${site.name} — ${site.tagline}`,
@@ -44,7 +51,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${heading.variable} ${body.variable} h-full scroll-smooth antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#f6f3ec] text-stone-800">
+      <body className="min-h-full flex flex-col bg-page text-ink">
         {children}
       </body>
     </html>

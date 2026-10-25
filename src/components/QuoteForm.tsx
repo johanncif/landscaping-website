@@ -48,19 +48,19 @@ export function QuoteForm() {
   return (
     <form
       onSubmit={onSubmit}
-      className="rounded-2xl bg-white p-6 shadow-[0_20px_50px_-24px_rgba(28,45,28,0.45)] ring-1 ring-stone-200 sm:p-8"
+      className="rounded-2xl bg-white p-6 shadow-[0_20px_50px_-24px_rgba(10,58,88,0.45)] ring-1 ring-sky-200 sm:p-8"
     >
       <div className="grid gap-4">
-        <label className="grid gap-1.5 text-sm font-medium text-stone-800">
-          Name <span className="font-normal text-stone-500">(optional)</span>
+        <label className="grid gap-1.5 text-sm font-medium text-ink">
+          Name <span className="font-normal text-muted">(optional)</span>
           <input
             name="name"
             type="text"
             autoComplete="name"
-            className="h-11 rounded-lg border border-stone-300 bg-stone-50 px-3 text-base font-normal text-stone-900 outline-none ring-emerald-700/30 focus:border-emerald-700 focus:bg-white focus:ring-2"
+            className="h-11 rounded-lg border border-sky-200 bg-sky-50 px-3 text-base font-normal text-ink outline-none ring-water/30 focus:border-water focus:bg-white focus:ring-2"
           />
         </label>
-        <label className="grid gap-1.5 text-sm font-medium text-stone-800">
+        <label className="grid gap-1.5 text-sm font-medium text-ink">
           Property address
           <input
             name="address"
@@ -68,10 +68,10 @@ export function QuoteForm() {
             required
             autoComplete="street-address"
             placeholder="123 Oak Lane, Springfield"
-            className="h-11 rounded-lg border border-stone-300 bg-stone-50 px-3 text-base font-normal text-stone-900 outline-none ring-emerald-700/30 focus:border-emerald-700 focus:bg-white focus:ring-2"
+            className="h-11 rounded-lg border border-sky-200 bg-sky-50 px-3 text-base font-normal text-ink outline-none ring-water/30 focus:border-water focus:bg-white focus:ring-2"
           />
         </label>
-        <label className="grid gap-1.5 text-sm font-medium text-stone-800">
+        <label className="grid gap-1.5 text-sm font-medium text-ink">
           Phone number
           <input
             name="phone"
@@ -80,10 +80,10 @@ export function QuoteForm() {
             autoComplete="tel"
             inputMode="tel"
             placeholder="(555) 123-4567"
-            className="h-11 rounded-lg border border-stone-300 bg-stone-50 px-3 text-base font-normal text-stone-900 outline-none ring-emerald-700/30 focus:border-emerald-700 focus:bg-white focus:ring-2"
+            className="h-11 rounded-lg border border-sky-200 bg-sky-50 px-3 text-base font-normal text-ink outline-none ring-water/30 focus:border-water focus:bg-white focus:ring-2"
           />
         </label>
-        <label className="grid gap-1.5 text-sm font-medium text-stone-800">
+        <label className="grid gap-1.5 text-sm font-medium text-ink">
           Email address
           <input
             name="email"
@@ -92,36 +92,36 @@ export function QuoteForm() {
             autoComplete="email"
             inputMode="email"
             placeholder="example@example.com"
-            className="h-11 rounded-lg border border-stone-300 bg-stone-50 px-3 text-base font-normal text-stone-900 outline-none ring-emerald-700/30 focus:border-emerald-700 focus:bg-white focus:ring-2" 
+            className="h-11 rounded-lg border border-sky-200 bg-sky-50 px-3 text-base font-normal text-ink outline-none ring-water/30 focus:border-water focus:bg-white focus:ring-2"
           />
         </label>
-        <label className="grid gap-1.5 text-sm font-medium text-stone-800">
+        <label className="grid gap-1.5 text-sm font-medium text-ink">
           What do you need?{" "}
-          <span className="font-normal text-stone-500">(optional)</span>
+          <span className="font-normal text-muted">(optional)</span>
           <textarea
             name="notes"
             rows={3}
-            placeholder="Mowing, new beds, a full redesign…"
-            className="rounded-lg border border-stone-300 bg-stone-50 px-3 py-2 text-base font-normal text-stone-900 outline-none ring-emerald-700/30 focus:border-emerald-700 focus:bg-white focus:ring-2"
+            placeholder="Mowing, pool opening, a full redesign…"
+            className="rounded-lg border border-sky-200 bg-sky-50 px-3 py-2 text-base font-normal text-ink outline-none ring-water/30 focus:border-water focus:bg-white focus:ring-2"
           />
         </label>
       </div>
       <button
         type="submit"
         disabled={status === "sending"}
-        className="mt-6 inline-flex h-12 w-full items-center justify-center rounded-lg bg-emerald-800 px-4 text-sm font-semibold tracking-wide text-white transition hover:bg-emerald-700 disabled:cursor-not-allowed disabled:opacity-70"
+        className="mt-6 inline-flex h-12 w-full items-center justify-center rounded-lg bg-brand px-4 text-sm font-semibold tracking-wide text-white transition hover:bg-water disabled:cursor-not-allowed disabled:opacity-70"
       >
         {status === "sending" ? "Sending…" : "Request a callback"}
       </button>
       {message ? (
         <p
           role="status"
-          className={`mt-4 text-sm ${status === "error" ? "text-red-700" : "text-emerald-800"}`}
+          className={`mt-4 text-sm ${status === "error" ? "text-red-700" : "text-brand"}`}
         >
           {message}
         </p>
       ) : (
-        <p className="mt-4 text-sm text-stone-500">
+        <p className="mt-4 text-sm text-muted">
           We use your address, number, and email only to reach you about this quote.
         </p>
       )}
