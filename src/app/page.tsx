@@ -1,3 +1,4 @@
+import { HeroScene } from "@/components/HeroScene";
 import { QuoteForm } from "@/components/QuoteForm";
 import { ServiceAreas } from "@/components/ServiceAreas";
 import { services, site } from "@/lib/site";
@@ -86,12 +87,8 @@ export default function Home() {
       <main id="top" className="flex-1">
         <section className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-16 lg:grid-cols-2 lg:py-24">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-water">
-              Landscaping and pool care, done right
-            </p>
             <h1 className="mt-4 max-w-xl text-4xl leading-tight text-ink sm:text-5xl">
-              Choose a crew that treats your yard and pool like a reputation,
-              not a route.
+              LANDSCAPING & POOL CARE
             </h1>
             <p className="mt-5 max-w-lg text-lg leading-relaxed text-muted">
               {site.name} handles lawn care, planting, landscape design, and
@@ -114,18 +111,14 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <PhotoSlot
-            tone="blue"
-            label="Hero photo of a yard and pool (client will provide)"
-          />
+          <HeroScene />
         </section>
 
         <section id="services" className="border-y border-sky-200 bg-white py-16">
           <div className="mx-auto max-w-6xl px-5">
-            <h2 className="text-3xl text-ink">Work that sells itself</h2>
+            <h2 className="text-3xl text-ink">SERVICES OFFERED</h2>
             <p className="mt-3 max-w-2xl text-muted">
-              Green for the grounds, blue for the water. These frames are ready
-              for before-and-after photos of real jobs. Drop images into{" "}
+              Green for the grounds, blue for the water. Drop images into{" "}
               <code className="rounded bg-sky-50 px-1.5 py-0.5 text-sm text-ink">
                 public/photos
               </code>{" "}
@@ -177,8 +170,6 @@ export default function Home() {
               <h2 className="text-3xl text-white">Want a quote? We will call you.</h2>
               <p className="mt-4 max-w-md text-sky-100">
                 Leave the property address, a number, and an email we can reach.
-                No online checkout, no pressure — just a conversation about the
-                yard, the pool, and a clear price.
               </p>
               <p className="mt-6 text-sm text-sky-200">
                 Prefer to call?{" "}

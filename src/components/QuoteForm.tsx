@@ -52,11 +52,13 @@ export function QuoteForm() {
     >
       <div className="grid gap-4">
         <label className="grid gap-1.5 text-sm font-medium text-ink">
-          Name <span className="font-normal text-muted">(optional)</span>
+          Name
           <input
             name="name"
             type="text"
+            required
             autoComplete="name"
+            placeholder="John Doe"
             className="h-11 rounded-lg border border-sky-200 bg-sky-50 px-3 text-base font-normal text-ink outline-none ring-water/30 focus:border-water focus:bg-white focus:ring-2"
           />
         </label>

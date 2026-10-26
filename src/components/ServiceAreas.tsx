@@ -15,18 +15,24 @@ export function ServiceAreas() {
         className="pointer-events-none absolute -right-16 bottom-0 h-96 w-96 rounded-full bg-water/50 blur-3xl"
       />
       <div className="relative mx-auto max-w-6xl px-5">
-        <p className="text-sm font-semibold uppercase tracking-[0.22em] text-sky-300">
-          Service area
-        </p>
         <div className="mt-4 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-          <h2 className="max-w-xl text-4xl leading-tight text-white sm:text-5xl">
-            Five counties. One crew that actually shows up.
+          <h2 className="flex max-w-xl items-center gap-3 text-4xl leading-tight text-white sm:gap-4 sm:text-5xl">
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              className="h-10 w-10 shrink-0 text-sky-300 sm:h-12 sm:w-12"
+              fill="none"
+            >
+              <path
+                d="M12 21s7-6.2 7-11.2A7 7 0 0 0 5 9.8C5 14.8 12 21 12 21Z"
+                stroke="currentColor"
+                strokeWidth="1.75"
+                strokeLinejoin="round"
+              />
+              <circle cx="12" cy="9.6" r="2.35" fill="currentColor" />
+            </svg>
+            SERVICE AREAS
           </h2>
-          <p className="max-w-md text-base leading-relaxed text-sky-100">
-            From inland Osceola to the Treasure Coast, we cover a wide stretch
-            of Florida — so the same finish you see in one county is the finish
-            we bring to the next.
-          </p>
         </div>
 
         <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-6">

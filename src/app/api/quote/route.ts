@@ -21,6 +21,13 @@ export async function POST(request: Request) {
   const notes = String(payload.notes ?? "").trim().slice(0, 1000);
   const phoneDigits = digitsOnly(phone);
 
+  if (name.length < 2) {
+    return NextResponse.json(
+      { error: "Please enter your name." },
+      { status: 400 },
+    );
+  }
+
   if (address.length < 8) {
     return NextResponse.json(
       { error: "Please enter the full property address." },
@@ -43,7 +50,7 @@ export async function POST(request: Request) {
   }
 
   const lead = {
-    name: name || null,
+    name,
     address,
     phone,
     email,
